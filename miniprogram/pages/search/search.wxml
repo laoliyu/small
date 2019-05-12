@@ -1,0 +1,40 @@
+<!-- miniprogram/pages/search/search.wxml -->
+<!-- 搜索框的实现 -->
+<view class="search-hd">
+    <!-- <view class="search-area">
+        <form bindsubmit="search">
+            <view class="search-type" bindtap="changeSearchType">
+                {{searchTpe == 0 ?'默认':'类型'}}
+            </view>
+            <input class="search-txt" name="keyworld" auto-focus placeholder="{{searchType == 0 ? '大家都在搜': '变瘦的方法,如: 运动, 餐食'}}" />
+            <button class="search-btn" fromType="sumbit">搜索</button>
+        </form>
+    </view> -->
+    <!-- 搜索框 -->
+    <view class='page_row' bindtap="suo">
+        <view class="search">
+            <view class="df search_arr">
+                <icon class="searchcion" size='20' type='search'></icon>
+                <view class="search-type" bindtap="changeSearchType">
+                    {{searchType == 0 ?'':''}}
+                </view>
+                <input class="search-txt" name="keyworld" auto-focus placeholder="{{searchType == 0 ? '大家都在搜': '变瘦的方法,如: 运动, 餐食'}}" />
+            </view>
+        </view>
+        <view class='sousuo'>搜索</view>
+    </view>
+    <!-- <!-- 热门搜索 -->
+    <view class="search-keyword">
+        <view class="search-keyword-title">热门搜索</view>
+        <view wx:for="{{hotKeyword}}" wx:for-item="hotKeywordItem" wx:key="hotKeywordItem" class="search-keyword-item" data-keyword="{{hotKeywordItem}}" bindtap="searchByKeyword">
+            {{hotKeywordItem}}
+        </view>
+    </view>
+    <!-- 热门类型 -->
+    <view class="search-keyword">
+        <view class="search-keyword-title">热门类型</view>
+        <view wx:for="{{hotTag}}" wx:for-item="hotTagItem" wx:key="hotTagItem" class="search-keyword-item" data-Tag="{{hotKeywordItem}}" bindtap="searchByKeyword">
+            {{hotTagItem}}
+        </view>
+    </view>
+</view>

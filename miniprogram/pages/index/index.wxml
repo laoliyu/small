@@ -1,0 +1,10 @@
+<!-- 搜索框的实现 -->
+<view class='page_row' bindtap="suo">
+    <view class="search">
+        <view class="df search_arr">
+            <icon class="searchcion" size='20' type='search'></icon>
+            <input class="search-txt" name="keyworld" auto-focus placeholder="{{searchType == 0 ? '大家都在搜': '变瘦的方法,如: 运动, 餐食'}}" />
+        </view>
+    </view>
+    <view class='sousuo'>搜索</view>
+</view>

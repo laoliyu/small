@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/firstpage/firstpage",
+    "pages/shopmall/shopmall",
+    "pages/mycenter/mycenter",
+    "pages/search/search",
+    "pages/searchResult/searchResult"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "仿小红书",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#d73e3e",
+    "backgroundColor": "f3f1ef",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/bar/index-0.png",
+        "selectedIconPath": "images/bar/index-1.png"
+      },
+      {
+        "pagePath": "pages/shopmall/shopmall",
+        "text": "商城",
+        "iconPath": "images/bar/mall-0.png",
+        "selectedIconPath": "images/bar/mall-1.png"
+      },
+      {
+        "pagePath": "pages/mycenter/mycenter",
+        "text": "我的",
+        "iconPath": "images/bar/mine-0.png",
+        "selectedIconPath": "images/bar/wode-1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
