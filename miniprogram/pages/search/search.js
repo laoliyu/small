@@ -25,8 +25,9 @@ Page({
     })
   },
   suo: function (e) {
+    console.log(e)
     var that = this
-    var keyword = e.detail.value.keyworld
+    var keyword = e.detail
     if (keyword == '') {
       wx.showToast({
         title: '请输入你想要搜索的内容',

@@ -8,3 +8,90 @@
     </view>
     <view class='sousuo'>搜索</view>
 </view>
+<!-- 横向滑动块 -->
+<view class="header">
+    <scroll-view class="scroll-view_H" scroll-x="{{true}}">
+        <view class="cont">
+            <view class="list">
+                <view class="green" wx:for="{{tags}}" wx:key="{{index}}" bindtap='fnclick'>
+                    {{item}}
+                    <video src="" class="tujian">{{lists[0].videoUrl}}</video>
+                </view>
+            </view>
+            <view class="cur" style='left:{{left}}px'></view>
+        </view>
+    </scroll-view>
+</view>
+<!-- 下面的内容 -->
+<view class="tuijian">
+ <view class="newest">
+    <view class="newest-box">
+      <view class="newest-list">
+        <navigator url="../details/details">
+          <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557719421977&di=42035b4ffdbccf9435c382e4301421b2&imgtype=0&src=http%3A%2F%2Fimg1.soyoung.com%2Ftieba%2Fweb%2F20141113%2F1%2F20141113155219460_570.jpg"></image>
+          <view class="newest-text">
+            <text>根据脸型来选择发型</text>
+          </view>
+          
+        </navigator>
+      </view>
+      <view class="newest-list">
+        <navigator url="../details/details">
+            <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3273757593,4016860383&fm=15&gp=0.jpg"></image>
+            <view class="newest-text"><text>学生的衣服搭配</text></view>
+        
+        </navigator>
+      </view>
+      <view class="newest-list">
+        <navigator url="../details/details">
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=416202739,623395875&fm=26&gp=0.jpg"></image>
+            <view class="newest-text"><text>夏天牛仔裤的搭配</text></view>
+            <view class="newest-text"><text>￥ 0.03</text></view>
+        </navigator>
+      </view>
+      <view class="newest-list">
+        <navigator url="../details/details">
+            <video src="https://sv.baidu.com/videoui/page/videoland?pd=bjh&context={%22nid%22:%222942368793579134886%22,%22sourceFrom%22:%22bjh%22}&fr=bjhauthor&type=video"></video>
+            <view class="newest-text"><text>小姐姐跳的舞蹈</text></view>
+            
+        </navigator>
+      </view>
+      <view class="newest-list">
+        <navigator url="../details/details">
+           <video src="https://sv.baidu.com/videoui/page/videoland?pd=bjh&context={%22nid%22:%222719792332323761937%22,%22sourceFrom%22:%22bjh%22}&fr=bjhauthor&type=video"></video>
+            <view class="newest-text"><text>少儿舞蹈《唐诗宋词》</text></view>
+          
+        </navigator>
+      </view>
+      <view class="newest-list">
+        <navigator url="../details/details">
+            <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557720819154&di=ac44f9f69a20c8bbe8eda39ac964f74d&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20171125%2F3a43cc648fb04b8180aaac7c679317b0.jpeg"></image>
+            <view class="newest-text"><text>让男士把持不住的行为</text></view>
+            <view class="newest-text"><text>￥ 0.03</text></view>
+        </navigator>
+      </view>
+      <view class="newest-list">
+        <navigator url="../details/details">
+            <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557720990724&di=8a45b97488fd22e22e6bb5b2a7a10f60&imgtype=0&src=http%3A%2F%2Fpic.cn2che.com%2Fphotos%2F2016%2F02%2F05%2F20160205110633725.png"></image>
+            <view class="newest-text"><text>看看你能买得起那个车</text></view>
+           
+        </navigator>
+      </view>
+      <view class="newest-list">
+        <navigator url="../details/details">
+            <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557721171208&di=4773546dcc51e21a7c2470a6330234f9&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201806%2F02%2F20180602190415_rlrtp.jpg"></image>
+            <view class="newest-text"><text>这样的何洛洛你见过吗？</text></view>
+         
+        </navigator>
+      </view>
+      <view class="newest-list">
+        <navigator url="../details/details">
+            <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557721254675&di=9e3412637e96de2346b80ca97d0889d6&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201502%2F12%2F20150212133634_YUX8s.jpeg"></image>
+            <view class="newest-text"><text>让人爱不释手的皮卡丘</text></view>
+        
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+</view>
