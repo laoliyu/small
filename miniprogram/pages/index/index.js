@@ -1,49 +1,112 @@
-
 Page({
   data: {
-    tags: [
-      "推荐",
-      "附近",
-      "视频",
-      "时尚",
-      "护肤",
-      "彩妆",
-      "美食",
-      "旅行",
-      "影视",
-      "读书",
-      "明星",
-      "健身",
-      "家居",
-      "宠物",
-      "音乐",
-      "婚礼",
-      "母婴",
-      "萌娃",
-      "数码",
-      "汽车",
-      "男士穿搭"
-
-    ],
-    // lists: [
-    //   {
-    //    imagePic:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557719421977&di=42035b4ffdbccf9435c382e4301421b2&imgtype=0&src=http%3A%2F%2Fimg1.soyoung.com%2Ftieba%2Fweb%2F20141113%2F1%2F20141113155219460_570.jpg',
-    //     name:'根据脸型的不同，选择不同的发型'
     
-    //   },
-    //   {}
-    // ],
+    tags: [{
+      id: 0,
+      name: '推荐'
+    },
+    {
+      id: 1,
+      name: '附近'
+    },
+    {
+      id: 2,
+      name: '视频'
+    },
+    {
+      id: 3,
+      name: '时尚'
+    },
+    {
+      id: 4,
+      name: '护肤'
+    },
+    {
+      id: 5,
+      name: '彩妆'
+    },
+    {
+      id: 6,
+      name: '美食'
+    },
+    {
+      id: 7,
+      name: '旅行'
+    },
+    {
+      id: 8,
+      name: '影视'
+    },
+    {
+      id: 9,
+      name: '读书'
+    },
+    {
+      id: 10,
+      name: '明星'
+    },
+    {
+      id: 11,
+      name: '健身'
+    },
+    {
+      id: 12,
+      name: '家居'
+    },
+    {
+      id: 13,
+      name: '宠物'
+    },
+    {
+      id: 14,
+      name: '音乐'
+    },
+    {
+      id: 15,
+      name: '婚礼'
+    },
+    {
+      id: 16,
+      name: '母婴'
+    },
+    {
+      id: 17,
+      name: '萌娃'
+    },
+    {
+      id: 18,
+      name: '数码'
+    },
+    {
+      id: 19,
+      name: '汽车'
+    },
+    {
+      id: 20,
+      name: '男士穿搭'
+    }
+    ],
+    
     left: 0,
+    num: 0,
+    content: '推荐',
   },
+
+
   onLoad() {
+    this.setData({});
   },
-  // 导航条鼠标跟随
-  fnclick(ev) {
-    this.setData({
-      left: ev.target.offsetLeft
+
+  //   // 下面内容的跳转
+
+  goDetail: function () {
+    wx.navigateTo({
+      url: '../detail/detail',
     })
 
   },
+
+
 
   // 实现页面的跳转
   suo: function (e) {
@@ -51,6 +114,22 @@ Page({
       url: '../search/search',
     })
   },
+
+
+  ficon: function (e) {
+    console.log(e)
+    let num = e.target.id
+    console.log(num)
+    let content = this.data.tags[num].name
+    console.log(content.name)
+    this.setData({
+      num: num,
+      content: content,
+      left: e.target.offsetLeft  // 导航条鼠标跟随
+    })
+    console.log(this)
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
