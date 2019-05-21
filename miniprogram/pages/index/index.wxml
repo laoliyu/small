@@ -1,5 +1,5 @@
-<!-- 搜索框的实现-->
-<view class='page_row' bindtap="suo">
+<!-- 搜索框的实现 -->
+<!-- <view class='page_row' bindtap="suo">
   <view class="search">
     <view class="df search_arr">
       <icon class="searchcion" size='20' type='search'></icon>
@@ -7,20 +7,93 @@
     </view>
   </view>
   <view class='sousuo'>搜索</view>
-</view>
+</view> -->
 <!-- 横向滑动块 -->
- <view class="header">
+<!-- <view class="header">
   <scroll-view class="scroll-view_H" scroll-x="{{true}}" current="{{current}}" autoplay="{{false}}">
     <view class="cont">
       <view class="list">
-        <view class='style {{item.id==num?"active":""}}'bindtap="ficon" wx:for="{{tags}}" wx:key="" id="{{index}}">{{item.name}}</view>
+        <view class='style {{item.id==num?"active":""}}' bindtap="ficon" wx:for="{{category}}" wx:key="" id="{{index}}">
+          {{item.name}}
+        </view>
       </view>
       <view class="cur" style='left:{{left}}px'></view>
     </view>
   </scroll-view>
-</view> 
-<!-- 下面的内容 -->
-<view class="container">
-    <view class='content' bindtap="goDetail" >{{content}}</view>
+</view> -->
+<!-- 内容部分 -->
+<!-- <swiper class="notes" current="{{toView}}">
+  <swiper-item class="category" wx:for="{{detail}}"
+  wx:key="{{item.id}}">
+    <scroll-view class="cate-box" id="{{item.id}}" scroll-y>
+     <!-- 文章列表内容 --> 
+      <!-- <view class="note" wx:for="{{item.notes}}" wx:for-item="notes" wx:key="{{index}}">
+        <view class="note-info">      
+          <navigator url="../index/note-info/note-info" >
+            <view class="home-note-img">
+              <image src="{{notes.note_image}}"/>
+            </view>
+            <span>{{notes.title}}</span>
+          </navigator>
+        </view>  -->
+        <!-- 作者信息 -->
+        <!-- <view class="note-handle">
+          <navigator class="writer" url="../index/note-writer/note-writer">
+            <image class="photo-img" src="{{notes.writer_img}}"/>
+            <span class="name">{{notes.writer}}</span>
+          </navigator>
+          <view class="like">
+            <image class="like-icon" src="/images/like.png"/>
+            <span>{{notes.like}}</span>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item> -->
+<!-- </swiper> --> 
+<view class="page">
+  <!-- 搜索框 -->
+  <view class="search">
+    <view class="searchBar">
+      <icon class="weui-icon-search" type="search" size="14"></icon>
+      <input  class="input" placeholder="大家都在搜" bindtap="entrySearch" disabled />
+    </view>
+  </view>
+  <!-- 导航栏 -->
+  <view class="navBar">
+      <scroll-view class="navBar-box" scroll-x="true" style="white-space: nowrap; display:flex ">
+          <view class="cate-list {{curIndex==index?'on':''}}" wx:for="{{category}}" 
+                wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" 
+                bindtap="switchCategory">{{item.name}}</view>
+      </scroll-view>
+  </view>
+  <!-- 文章列表 -->
+  <swiper class="notes" current="{{toView}}">
+      <swiper-item class="category" wx:for="{{detail}}" wx:key="{{item.id}}">
+        <scroll-view class="cate-box" id="{{item.id}}" scroll-y>
+        <!-- 文章封面内容 -->
+          <view class="note" wx:for="{{item.notes}}" wx:for-item="notes" wx:key="{{index}}">
+            <view class="note-info">
+              <navigator url="../index/note-info/note-info" >
+                <view class="home-note-img">
+                  <image src="{{notes.note_image}}"/>
+                </view>
+                <span>{{notes.title}}</span>
+              </navigator>
+            </view> 
+            <!-- 作者信息 -->
+            <view class="note-handle">
+              <navigator class="writer" url="../index/note-writer/note-writer">
+                <image class="photo-img" src="{{notes.writer_img}}"/>
+                <span class="name">{{notes.writer}}</span>
+              </navigator>
+              <view class="like">
+                <image class="like-icon" src="/images/like.png"/>
+                <span>{{notes.like}}</span>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+  </swiper>
 </view>
-

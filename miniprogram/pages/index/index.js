@@ -1,147 +1,75 @@
+// pages/kinds/kinds.js
+const app = getApp()
+
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
-    
-    tags: [{
-      id: 0,
-      name: '推荐'
-    },
-    {
-      id: 1,
-      name: '附近'
-    },
-    {
-      id: 2,
-      name: '视频'
-    },
-    {
-      id: 3,
-      name: '时尚'
-    },
-    {
-      id: 4,
-      name: '护肤'
-    },
-    {
-      id: 5,
-      name: '彩妆'
-    },
-    {
-      id: 6,
-      name: '美食'
-    },
-    {
-      id: 7,
-      name: '旅行'
-    },
-    {
-      id: 8,
-      name: '影视'
-    },
-    {
-      id: 9,
-      name: '读书'
-    },
-    {
-      id: 10,
-      name: '明星'
-    },
-    {
-      id: 11,
-      name: '健身'
-    },
-    {
-      id: 12,
-      name: '家居'
-    },
-    {
-      id: 13,
-      name: '宠物'
-    },
-    {
-      id: 14,
-      name: '音乐'
-    },
-    {
-      id: 15,
-      name: '婚礼'
-    },
-    {
-      id: 16,
-      name: '母婴'
-    },
-    {
-      id: 17,
-      name: '萌娃'
-    },
-    {
-      id: 18,
-      name: '数码'
-    },
-    {
-      id: 19,
-      name: '汽车'
-    },
-    {
-      id: 20,
-      name: '男士穿搭'
-    }
+    category: [       // 导航栏内容数据
+      { name: '推荐', id: '0' },
+      { name: '附近', id: '1' },
+      { name: '视频', id: '2' },
+      { name: '时尚', id: '3' },
+      { name: '护肤', id: '4' },
+      { name: '彩妆', id: '5' },
+      { name: '美食', id: '6' },
+      { name: '旅行', id: '7' },
+      { name: '影视', id: '8' },
+      { name: '读书', id: '9' },
+      { name: '明星', id: '10' },
+      { name: '健身', id: '11' },
+      { name: '家居', id: '12' },
+      { name: '音乐', id: '13' },
+      { name: '宠物', id: '14' },
+      { name: '婚礼', id: '15' },
+      { name: '母婴', id: '16' },
+      { name: '萌娃', id: '17' },
+      { name: '数码', id: '18' },
+      { name: '男士穿搭', id: '19' },
     ],
-    
-    left: 0,
-    num: 0,
-    content: '推荐',
+    curIndex: 0,
+    detail: [],
+    toView: 'tuijian',
+    scroll: true
   },
-
-
-  onLoad() {
-    this.setData({});
-  },
-
-  //   // 下面内容的跳转
-
-  goDetail: function () {
-    wx.navigateTo({
-      url: '../detail/detail',
+  switchCategory(e) {
+    console.log(e);
+    this.setData({
+      curIndex: e.currentTarget.dataset.index?e.currentTarget.dataset.index:0,
+      toView: e.currentTarget.dataset.index,
     })
-
   },
-
-
-
-  // 实现页面的跳转
-  suo: function (e) {
+  // 搜索点击事件
+  entrySearch(e) {
     wx.navigateTo({
       url: '../search/search',
     })
   },
-
-
-  ficon: function (e) {
-    console.log(e)
-    let num = e.target.id
-    console.log(num)
-    let content = this.data.tags[num].name
-    console.log(content.name)
-    this.setData({
-      num: num,
-      content: content,
-      left: e.target.offsetLeft  // 导航条鼠标跟随
-    })
-    console.log(this)
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.setNavigationBarTitle({
+      title: '小红书',
+    })
+    // 请求数据
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/5cd80aacab33907aaae39e4f/smallShop/',
+      success: (res) => {
+        this.setData({
+          detail: res.data.data
+        })
+      }
+    })  
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
