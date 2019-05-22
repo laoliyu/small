@@ -74,12 +74,12 @@
         <!-- 文章封面内容 -->
           <view class="note" wx:for="{{item.notes}}" wx:for-item="notes" wx:key="{{index}}">
             <view class="note-info">
-              <navigator url="../index/note-info/note-info" >
+              <!-- <navigator url="../index/note-info/note-info" > -->
                 <view class="home-note-img">
                   <image src="{{notes.note_image}}"/>
                 </view>
                 <span>{{notes.title}}</span>
-              </navigator>
+              <!-- </navigator> -->
             </view> 
             <!-- 作者信息 -->
             <view class="note-handle">

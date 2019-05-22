@@ -1,2 +1,23 @@
-<!--miniprogram/pages/shopmall/shopmall.wxml-->
-<text>miniprogram/pages/shopmall/shopmall.wxml</text>
+<view class="smallshop">
+  <!-- 最上面的搜索框 -->
+  <view class='page_row' bindtap="suo">
+    <view class="search">
+      <view class="df search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <view class="search-type" bindtap="changeSearchType">{{searchType == 0 ?'':''}}</view>
+        <input class="search-txt" name="keyworld" auto-focus placeholder="{{searchType == 0 ? '大家都在搜': '变瘦的方法,如: 运动, 餐食'}}" />
+      </view>
+    </view>
+    <view class='sousuo'>搜索</view>
+  </view>
+  <!-- 下面的海报轮滑 -->
+  <view class="smallshop_bd">
+    <swiper class="" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" bindchange="bindchange">
+      <block wx:for="{{imagUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item}}"mode="scaleToFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>

@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/shopmall/shopmall",
     "pages/index/index",
     "pages/firstpage/firstpage",
-    "pages/shopmall/shopmall",
+    
     "pages/mycenter/mycenter",
     "pages/search/search",
     "pages/searchResult/searchResult",
