@@ -5,14 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imagUrls: ['http://img0.imgtn.bdimg.com/it/u=2367150806,3726492506&fm=26&gp=0.jpg',
-      'http://ku.90sjimg.com/element_origin_min_pic/16/09/21/2157e2886f77978.jpg  ',
-      'http://img.redocn.com/shejigao/20131023/20131021_0b1a3fce0726f0cbc016jjs8kZEe2RwP.jpg'],
-      indicatorDots:true,
-      autoplay:true,
-      interval:2000,
-      duration:1000,
-      circular:true,
     tags: [
       { nane: '推荐', id: '1' },
       { name: '彩妆', id: '2' },

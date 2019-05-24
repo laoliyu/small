@@ -20,14 +20,8 @@
   </view>
   <view class="daohang"></view>
   <!-- 下面的海报轮滑 -->
-  <view class="smallshop_bd">
-    <swiper class="" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" bindchange="bindchange">
-      <block wx:for="{{imagUrls}}" wx:key="{{index}}">
-        <swiper-item>
-          <image src="{{item}}" mode="scaleToFill" />
-        </swiper-item>
-      </block>
-    </swiper>
+  <view class="img">
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558703881139&di=9fca8551ac14e7199b195536d2e49be5&imgtype=0&src=http%3A%2F%2Fimg.sccnn.com%2Fbimg%2F341%2F03401.jpg" mode="widthFix" />
   </view>
   <!-- 海报下面的logo -->
   <view class="logo">
@@ -36,11 +30,29 @@
       <view class="dec1">全球直购</view>
       <image class="logo_pic1" src="../../images/true.png" style="width:10px;height:10px"></image>
       <view class="dec1">正品保障</view>
-        <image class="logo_pic1" src="../../images/after.png" style="width:10px;height:10px"></image>
+      <image class="logo_pic1" src="../../images/after.png" style="width:10px;height:10px"></image>
       <view class="dec1">售后无忧</view>
-        <image class="logo_pic1" src="../../images/lie.png" style="width:10px;height:10px"></image>
+      <image class="logo_pic1" src="../../images/lie.png" style="width:10px;height:10px"></image>
       <view class="dec1">假一赔十</view>
-      <view class="dec2"bindtap="seeMore">资质与规则</view>
+      <view class="dec2" bindtap="seeMore">资质与规则</view>
+    </view>
+  </view>
+  <!-- 三张图片的抢购 -->
+  <view class="item_pic">
+    <view class="list_pic1">
+      <span class="title">限时购.10点抢</span>
+      <view class="title_price">小棕瓶精华￥995</view>
+      <image class="shop_pic" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558704645551&di=f516f1bd2d7cbb23786c151d007e696c&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F02%2F49%2F46%2F73577ff83200ed4.jpg" style="width:50px;height:70px"></image>
+    </view>
+     <view class="list_pic2">
+      <span class="title">福利社</span>
+      <view class="title_price">官方自营 正品保证</view>
+      <image class="shop_pic" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558705816160&di=199952e39710d079050d232cdf73ea06&imgtype=0&src=http%3A%2F%2Fm.360buyimg.com%2Fpop%2Fjfs%2Ft24571%2F94%2F1727306405%2F45992%2Fb5c0a724%2F5b6963b3N0b661f48.jpg" style="width:50px;height:70px"></image>
+    </view>
+    <view class="list_pic3">
+      <span class="title">精选品牌</span>
+      <view class="title_price">Lytess</view>
+      <image class="shop_pic" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4178501995,2291513217&fm=26&gp=0.jpg" style="width:50px;height:65px"></image>
     </view>
   </view>
 </view>

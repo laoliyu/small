@@ -1,6 +1,6 @@
 {
   "pages": [
-      "pages/shopmall/seeMore",
+      
     "pages/shopmall/shopmall",
     "pages/index/index",
     "pages/firstpage/firstpage",
@@ -8,6 +8,7 @@
     "pages/search/search",
     "pages/searchResult/searchResult",
     "pages/details/details",
+    "pages/shopmall/seeMore",
     "pages/detail/detail"
   
   ],
