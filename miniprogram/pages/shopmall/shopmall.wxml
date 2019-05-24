@@ -5,19 +5,42 @@
       <view class="df search_arr">
         <icon class="searchcion" size='20' type='search'></icon>
         <view class="search-type" bindtap="changeSearchType">{{searchType == 0 ?'':''}}</view>
-        <input class="search-txt" name="keyworld" auto-focus placeholder="{{searchType == 0 ? '大家都在搜': '变瘦的方法,如: 运动, 餐食'}}" />
+        <input class="search-txt" name="keyworld" auto-focus placeholder="{{searchType == 0 ? '大家都在搜': '搜索小红书的商品'}}" />
       </view>
     </view>
     <view class='sousuo'>搜索</view>
   </view>
+  <!-- 下面的导航 -->
+  <view class="navBar">
+    <scroll-view class="navBar-box" scroll-x="true" style="white-space: nowrap; display:flex ">
+      <view class="cate-list {{curIndex==index?'on':''}}" wx:for="{{tags}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchCategory">
+        {{item.name}}
+      </view>
+    </scroll-view>
+  </view>
+  <view class="daohang"></view>
   <!-- 下面的海报轮滑 -->
   <view class="smallshop_bd">
     <swiper class="" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" bindchange="bindchange">
       <block wx:for="{{imagUrls}}" wx:key="{{index}}">
         <swiper-item>
-          <image src="{{item}}"mode="scaleToFill" />
+          <image src="{{item}}" mode="scaleToFill" />
         </swiper-item>
       </block>
     </swiper>
+  </view>
+  <!-- 海报下面的logo -->
+  <view class="logo">
+    <view class="pic1">
+      <image class="logo_pic1" src="../../images/buy.png" style="width:10px;height:10px"></image>
+      <view class="dec1">全球直购</view>
+      <image class="logo_pic1" src="../../images/true.png" style="width:10px;height:10px"></image>
+      <view class="dec1">正品保障</view>
+        <image class="logo_pic1" src="../../images/after.png" style="width:10px;height:10px"></image>
+      <view class="dec1">售后无忧</view>
+        <image class="logo_pic1" src="../../images/lie.png" style="width:10px;height:10px"></image>
+      <view class="dec1">假一赔十</view>
+      <view class="dec2"bindtap="seeMore">资质与规则</view>
+    </view>
   </view>
 </view>

@@ -1,0 +1,28 @@
+/* miniprogram/pages/shopmall/seeMore.wxss */
+
+.miaoshu {
+    width: 100%;
+    height: 600px;
+    background-color: white;
+}
+
+.head_title {
+    text-align: center;
+    margin: 10px;
+}
+
+.head_pic {
+    /* width: 70%; */
+    margin: 10px 5%;
+}
+
+.content {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.content text {
+    font-size: 15px;
+    display: block;
+    margin: 10px ;
+}

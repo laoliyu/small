@@ -22,7 +22,18 @@ Page({
       { name: '更多', id: '6' }
     ],
   },
-
+  switchCategory(e) {
+    console.log(e);
+    this.setData({
+      curIndex: e.currentTarget.dataset.index?e.currentTarget.dataset.index:0,
+      toView: e.currentTarget.dataset.index,
+    })
+  },
+  seeMore(e) {
+    wx.navigateTo({
+      url: '../shopmall/seeMore',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
