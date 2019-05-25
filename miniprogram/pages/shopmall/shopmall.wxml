@@ -44,7 +44,7 @@
       <view class="title_price">小棕瓶精华￥995</view>
       <image class="shop_pic" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558704645551&di=f516f1bd2d7cbb23786c151d007e696c&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F02%2F49%2F46%2F73577ff83200ed4.jpg" style="width:50px;height:70px"></image>
     </view>
-     <view class="list_pic2">
+    <view class="list_pic2">
       <span class="title">福利社</span>
       <view class="title_price">官方自营 正品保证</view>
       <image class="shop_pic" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558705816160&di=199952e39710d079050d232cdf73ea06&imgtype=0&src=http%3A%2F%2Fm.360buyimg.com%2Fpop%2Fjfs%2Ft24571%2F94%2F1727306405%2F45992%2Fb5c0a724%2F5b6963b3N0b661f48.jpg" style="width:50px;height:70px"></image>
@@ -53,6 +53,22 @@
       <span class="title">精选品牌</span>
       <view class="title_price">Lytess</view>
       <image class="shop_pic" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4178501995,2291513217&fm=26&gp=0.jpg" style="width:50px;height:65px"></image>
+    </view>
+  </view>
+  <!-- 下面的内容 -->
+  <view class="item_bd">
+    <view class="bd1" bindtap="goMore">
+      <view class="bd_pic">
+        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558758762821&di=4f3193490fa38f58410fa44559f54de3&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F0338cbe93580d5e6b0e89f25531541d455f66fda4a6a5-eVWQaf_fw658" style="width:100%;height:200px" />
+      </view>
+      <view class="bd_dec">
+        <text>水灵灵的美少女妆容教程 清透自然</text>
+      </view>
+      <view class="bd_touxiang">
+        <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2599779665,4254172285&fm=27&gp=0.jpg" style="width:50px;height:50px;" />
+        <text class="name">小可爱</text>
+        <text class="bd_num">123456</text>
+      </view>
     </view>
   </view>
 </view>
