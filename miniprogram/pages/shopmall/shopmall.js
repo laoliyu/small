@@ -31,7 +31,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/5cd80aacab33907aaae39e4f/smallShop/',
+      success: (res) => {
+        this.setData({
+          detail: res.data.data
+        })
+      }
+    })  
   },
 
   /**

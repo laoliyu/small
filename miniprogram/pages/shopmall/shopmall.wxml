@@ -56,19 +56,48 @@
     </view>
   </view>
   <!-- 下面的内容 -->
-  <view class="item_bd">
-    <view class="bd1" bindtap="goMore">
-      <view class="bd_pic">
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558758762821&di=4f3193490fa38f58410fa44559f54de3&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F0338cbe93580d5e6b0e89f25531541d455f66fda4a6a5-eVWQaf_fw658" style="width:100%;height:200px" />
+  <!-- <view class="item_bd">
+    <view class="bd1" wx:for="{{detail}}" wx:key="{{item.id}}" bindtap="goMore">
+      <view class="bd_pic" wx:for="{{item.messages}}"wx:key="{{item.id}}">
+        <image src="{{messages.ms_image}}" style="width:100%;height:200px" />
       </view>
       <view class="bd_dec">
-        <text>水灵灵的美少女妆容教程 清透自然</text>
+        <text>{{messages.title}}</text>
       </view>
       <view class="bd_touxiang">
-        <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2599779665,4254172285&fm=27&gp=0.jpg" style="width:50px;height:50px;" />
-        <text class="name">小可爱</text>
-        <text class="bd_num">123456</text>
+        <image src="{{messages.hd_image}}" style="width:50px;height:50px;" />
+        <text class="name">{{messages.hd_name}}</text>
+        <text class="bd_num">{{messages.hd_num}}</text>
       </view>
-    </view>
-  </view>
-</view>
+    </view>-->
+     <swiper class="item_bd" current="{{toView}}">
+      <swiper-item class="bd1" wx:for="{{detail}}" wx:key="{{item.id}}">
+        <scroll-view class="cate-box" id="{{item.id}}" scroll-y>
+        <!-- 文章封面内容 -->
+          <view class="bd_pic" wx:for="{{item.messages}}" wx:for-item="notes" wx:key="{{index}}">
+            <view class="note-info">
+              <!-- <navigator url="../index/note-info/note-info" > -->
+                <view class="home-note-img">
+                  <image src="{{messages.ms_image}}"/>
+                </view>
+                <span>{{messages.title}}</span>
+              <!-- </navigator> -->
+            </view> 
+            <!-- 作者信息 -->
+            <view class="bd_touxiang">
+              <navigator class="writer" url="../index/note-writer/note-writer">
+                <image class="photo-img" src="{{messages.hd_image}}"/>
+                <span class="name">{{messages.hd_name}}</span>
+              </navigator>
+              <view class="like">
+                <image class="like-icon" src="../../images/heart.png"/>
+                <span>{{messages.hd_num}}</span>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+  </swiper>
+
+  </view> 
+ 
